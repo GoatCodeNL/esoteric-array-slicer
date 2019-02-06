@@ -1,0 +1,17 @@
+{
+    "name": "goatcodenl/esoteric-array-slicer",
+    "description": "An esoteric package to retrieve the first part of an array.",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "symfony/var-dumper": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "GoatCodeNL\\Slicer\\": "src/"
+        }
+    }
+}
