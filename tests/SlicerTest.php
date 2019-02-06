@@ -11,7 +11,7 @@ class SlicerTest extends TestCase
     {
         $a = range(1, 99);
         $slicer = new Slicer();
-        $result = $slicer->Slice($a, 20);
+        $result = $slicer->slice($a, 20);
         for ($i = 0; $i < 20; $i++) {
             reset($result);
             $this->assertNotNull(key($result));
@@ -26,7 +26,7 @@ class SlicerTest extends TestCase
         $a = range('a', 'z');
 
         $slicer = new Slicer();
-        $result = $slicer->Slice($a, 10);
+        $result = $slicer->slice($a, 10);
 
         $prev = 0;
         for ($i = 0; $i < 10; $i++) {
@@ -39,7 +39,7 @@ class SlicerTest extends TestCase
         $a = range('a', 'z');
 
         $slicer = new Slicer();
-        $result = $slicer->Slice($a, 10);
+        $result = $slicer->slice($a, 10);
 
         $this->assertEquals('a', substr(serialize($result), 15, 1));
         $this->assertEquals('j', substr(serialize($result), -4, 1));
@@ -50,7 +50,7 @@ class SlicerTest extends TestCase
         $a = range(1, 100000);
 
         $slicer = new Slicer();
-        $result = $slicer->Slice($a, 4000);
+        $result = $slicer->slice($a, 4000);
         $end = microtime(true);
 
         shuffle($result); // do something to prevent DCE!

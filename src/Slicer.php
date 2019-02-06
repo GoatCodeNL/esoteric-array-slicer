@@ -4,7 +4,7 @@ namespace GoatCodeNL\Slicer;
 
 class Slicer
 {
-    public function Slice(array $a, $n) {
+    public function slice(array $a, $n) {
 
         preg_match('/^a:(\d+)/', serialize($a), $matches);
         array_map(
